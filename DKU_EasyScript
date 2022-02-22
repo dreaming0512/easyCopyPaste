@@ -1,0 +1,18 @@
+// 단국대 수강신청계획도우미 경쟁률 script
+var table = document.getElementsByClassName("tbl_column")[0];
+var body = table.getElementsByTagName('td');
+
+var hopeList = [], limitList = [], result = [];
+
+for(var i = 8; i < body.length; i = i + 13) {
+    hopeList.push(body[i].innerHTML);    // 희망인원 넣기
+    limitList.push(body[i + 1].innerHTML);    // 제한인원 넣기
+}
+
+for(var i = 0; i < hopeList.length; i++) {
+    result[i] = hopeList[i] / limitList[i];
+}
+
+for(var i = 0; i < result.length; i++) {
+    console.log(body[3 + 13 * i].innerHTML + "  |  " + body[5 + 13 * i].innerHTML + "  |  " + result[i]);    // 결과 출력
+}
