@@ -1,4 +1,4 @@
-// 단국대 수강신청계획도우미 경쟁률 script
+// 단국대 수강신청계획도우미 경쟁률도우미 script
 var table = document.getElementsByClassName("tbl_column")[0];
 var body = table.getElementsByTagName('td');
 
